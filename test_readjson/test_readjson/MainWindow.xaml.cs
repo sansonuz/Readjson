@@ -20,9 +20,24 @@ namespace test_readjson
     /// </summary>
     public partial class MainWindow : Window
     {
+        private readjson rj;
+        private Person p;
         public MainWindow()
         {
             InitializeComponent();
+            rj = new readjson();
+            p = new Person();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            rj.init();
+            p.Main();
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }
